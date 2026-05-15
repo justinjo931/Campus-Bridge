@@ -1,0 +1,67 @@
+{
+  "name": "Opportunity",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "internship",
+        "job",
+        "referral",
+        "freelance"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "stipend_salary": {
+      "type": "string"
+    },
+    "apply_link": {
+      "type": "string"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "posted_by_name": {
+      "type": "string"
+    },
+    "application_count": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "closed",
+        "flagged"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "title",
+    "company",
+    "type"
+  ]
+}

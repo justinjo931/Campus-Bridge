@@ -1,0 +1,96 @@
+{
+  "name": "PlacementExperience",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "role_title": {
+      "type": "string"
+    },
+    "interview_rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "round_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "questions": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "preparation_strategy": {
+      "type": "string"
+    },
+    "package_lpa": {
+      "type": "string"
+    },
+    "tips": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "selected",
+        "not_selected",
+        "waitlisted"
+      ]
+    },
+    "batch": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": false
+    },
+    "upvotes": {
+      "type": "number",
+      "default": 0
+    },
+    "upvoted_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "flagged",
+        "removed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "company_name",
+    "role_title"
+  ]
+}

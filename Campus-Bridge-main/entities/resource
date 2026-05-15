@@ -1,0 +1,75 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "notes",
+        "pdf",
+        "pyq",
+        "lab_manual",
+        "video",
+        "link",
+        "other"
+      ]
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "external_link": {
+      "type": "string"
+    },
+    "semester": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "downloads": {
+      "type": "number",
+      "default": 0
+    },
+    "upvotes": {
+      "type": "number",
+      "default": 0
+    },
+    "upvoted_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "flagged",
+        "removed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}
