@@ -5,7 +5,7 @@ const logo = logoAsset;
 import {
   LayoutDashboard, Users, MessagesSquare, BookOpen, Briefcase,
   Bell, Bookmark, UserCircle2, LogOut, Search, ShieldCheck, Loader2,
-  TrendingUp, Sparkles, Target, Trophy, Flame, ChevronDown, Check,
+  TrendingUp, Sparkles, Target, Trophy, Flame, ChevronDown, Check,Palette,
 } from "lucide-react";
 import { getUser, signOut, type AuthUser, type Role } from "@/lib/auth";
 
@@ -17,6 +17,7 @@ const nav = [
   { to: "/placements", icon: Briefcase, label: "Placements" },
   { to: "/chat", icon: MessagesSquare, label: "Messages" },
   { to: "/profile", icon: UserCircle2, label: "Profile" },
+  { to: "/appearance", icon: Palette, label: "Appearance" },
   { to: "/admin", icon: ShieldCheck, label: "Admin" },
 ];
 
@@ -80,7 +81,7 @@ export function AppShell({
   const visibleNav = nav.filter((n) => n.to !== "/admin" || user.role === "admin");
 
   return (
-    <div className="min-h-screen bg-[oklch(0.985_0.008_250)]">
+    <div className="min-h-screen bg-surface text-foreground">
       <div className="mx-auto max-w-[1600px] grid lg:grid-cols-[260px_1fr] gap-5 p-4 lg:p-5">
         {/* SIDEBAR */}
         <aside className="hidden lg:flex flex-col rounded-3xl bg-card border border-border shadow-soft p-4 sticky top-5 self-start h-[calc(100vh-2.5rem)] overflow-y-auto">
